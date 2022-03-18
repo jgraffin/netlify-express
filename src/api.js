@@ -4,9 +4,7 @@ const cors = require("cors");
 const app = express();
 const router = express.Router();
 
-app.use(cors());
-
-app.get("/", (req, res, next) => {
+router.get("/", cors(), (req, res, next) => {
   res.json([
     {
       id: "1",
