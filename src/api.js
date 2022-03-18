@@ -24,7 +24,20 @@ router.get("/", cors(), (req, res, next) => {
 app.use("/.netlify/functions/api", router);
 
 app.use("/.netlify/functions/api/:id", function (req, res, next) {
-  res.json({ data: id });
+  res.json([
+    {
+      id: "1",
+      name: "Julio",
+      team: "Manchester",
+      slugTeam: "manchester",
+    },
+    {
+      id: "2",
+      name: "Mark ",
+      team: "Arsenal",
+      slugTeam: "arsenal",
+    },
+  ]);
 });
 
 module.exports.handler = serverless(app);
