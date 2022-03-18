@@ -12,11 +12,13 @@ router.get("/", (req, res) => {
       id: "1",
       name: "Julio",
       team: "Manchester",
+      slugTeam: "manchester",
     },
     {
       id: "2",
       name: "Mark ",
       team: "Arsenal",
+      slugTeam: "arsenal",
     },
   ]);
 });
